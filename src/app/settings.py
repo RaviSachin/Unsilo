@@ -40,10 +40,13 @@ WHATSAPP_VERIFY_TOKEN = env("WHATSAPP_VERIFY_TOKEN")
 META_APP_SECRET = env("META_APP_SECRET")
 REQUIRE_SIGNATURE = env("WHATSAPP_REQUIRE_SIGNATURE", "true").lower() == "true"
 SELECTED_GROUPS_FILE = ROOT / env("SELECTED_GROUPS_FILE", "config/selected_groups.json")
+<<<<<<< HEAD
 # Testing only: the Meta test number gets 1:1 chats, never group messages. When true, direct chats are
 # kept as one pseudo-group "Direct messages (test)". Keep false on judging day.
 ALLOW_DIRECT = env("WHATSAPP_ALLOW_DIRECT", "false").lower() == "true"
 DIRECT_GROUP = {"id": "direct", "name": "Direct messages (test)"}
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 
 LLM_PROVIDER = env("LLM_PROVIDER", "gemini").lower()
 GEMINI_API_KEY = env("GEMINI_API_KEY")
@@ -68,6 +71,7 @@ def selected_groups() -> list[dict]:
     if not SELECTED_GROUPS_FILE.exists():
         return []
     data = json.loads(SELECTED_GROUPS_FILE.read_text(encoding="utf-8"))
+<<<<<<< HEAD
     out = [g if isinstance(g, dict) else {"id": None, "name": g} for g in data.get("selected_groups", [])]
     out = [g for g in out if "PUT_GROUP" not in f"{g.get('id')}{g.get('name')}"]  # placeholders match nothing
     return out + ([DIRECT_GROUP] if ALLOW_DIRECT else [])
@@ -75,6 +79,9 @@ def selected_groups() -> list[dict]:
 
 def real_groups() -> list[dict]:
     return [g for g in selected_groups() if g is not DIRECT_GROUP]
+=======
+    return [g if isinstance(g, dict) else {"id": None, "name": g} for g in data.get("selected_groups", [])]
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 
 
 def ai_enabled() -> bool:
@@ -93,6 +100,7 @@ def setup_problems() -> list[dict]:
     if not (GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET) and not (DRIVE_API_KEY and DRIVE_FOLDER_ID):
         out.append({"source": "drive", "text": "Drive needs Connect Google, or DRIVE_API_KEY plus DRIVE_FOLDER_ID "
                     "(a folder shared as Anyone with the link)." + (" DRIVE_FOLDER_ID is empty." if DRIVE_API_KEY else "")})
+<<<<<<< HEAD
     if not real_groups():
         out.append({"source": "whatsapp", "text": "config/selected_groups.json has no real group yet, so group messages are dropped. "
                     "Put the group id or name there" + (". Direct chats are kept for testing (WHATSAPP_ALLOW_DIRECT=true)."
@@ -102,11 +110,22 @@ def setup_problems() -> list[dict]:
     if not META_APP_SECRET and REQUIRE_SIGNATURE:
         out.append({"source": "whatsapp", "text": "META_APP_SECRET is empty, so every webhook POST is rejected (401). "
                     "Copy it from Meta app > App settings > Basic > App secret."})
+=======
+    groups = selected_groups()
+    if not groups or all("PUT_GROUP" in f"{g.get('id')}{g.get('name')}" for g in groups):
+        out.append({"source": "whatsapp", "text": "config/selected_groups.json still has the placeholder. "
+                    "Put the real group id or name there, or every WhatsApp message is dropped."})
+    if not (WHATSAPP_VERIFY_TOKEN and META_APP_SECRET):
+        out.append({"source": "whatsapp", "text": "Set WHATSAPP_VERIFY_TOKEN and META_APP_SECRET for the webhook."})
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     if not ai_enabled():
         out.append({"source": "ai", "text": "No GEMINI_API_KEY: labels use keyword rules and answers list records only."})
     if not env("REFERENCE_DATE"):
         out.append({"source": "dates", "text": "REFERENCE_DATE is empty, so today is used for 'unanswered 5+ days'."})
+<<<<<<< HEAD
     if GOOGLE_CLIENT_ID and not SANDBOX_EMAIL:
         out.append({"source": "gmail", "text": "SANDBOX_EMAIL is empty. Set it to the Gmail address you connect, "
                     "so emails sent from it count as replies for 'unanswered 5+ days'."})
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     return out

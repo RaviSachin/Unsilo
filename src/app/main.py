@@ -8,7 +8,11 @@ from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse, Red
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+<<<<<<< HEAD
 from . import analyse, ask, export, google, settings, views, whatsapp
+=======
+from . import analyse, ask, export, google, settings, whatsapp
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 from . import db
 from .db import conn
 
@@ -21,7 +25,11 @@ log.info("AI: %s | Google OAuth: %s | Drive: %s | selected groups: %d",
          "gemini" if settings.ai_enabled() else "keyword rules",
          "configured" if settings.GOOGLE_CLIENT_ID and settings.GOOGLE_CLIENT_SECRET else "missing",
          google.drive_mode(), len(settings.selected_groups()))
+<<<<<<< HEAD
 for problem in settings.setup_problems() + ([{"text": google.connection_problem()}] if google.connection_problem() else []):
+=======
+for problem in settings.setup_problems():
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     log.warning("setup: %s", problem["text"])
 
 
@@ -31,6 +39,7 @@ async def unexpected_error(request: Request, exc: Exception):
     log.exception("Unhandled error on %s", request.url.path)
     return JSONResponse(status_code=500, content={"detail": f"Server error: {type(exc).__name__}: {exc}"})
 WEB = settings.ROOT / "web"
+<<<<<<< HEAD
 DIST = settings.ROOT / "frontend" / "dist"  # React build (npm run build); the classic UI stays at /classic
 app.include_router(views.router)
 
@@ -55,6 +64,8 @@ def _setup() -> list[dict]:
     if reason:
         problems.insert(0, {"source": "gmail", "text": reason})
     return problems
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 
 
 @app.get("/api/health")
@@ -64,7 +75,11 @@ def health():
             "google_configured": bool(settings.GOOGLE_CLIENT_ID and settings.GOOGLE_CLIENT_SECRET),
             "google_connected": google.connected(), "drive_mode": google.drive_mode(),
             "selected_groups": len(settings.selected_groups()),
+<<<<<<< HEAD
             "reference_date": settings.reference_date().date().isoformat(), "setup": _setup(),
+=======
+            "reference_date": settings.reference_date().date().isoformat(), "setup": settings.setup_problems(),
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
             "counts": {"emails": count("SELECT COUNT(*) FROM emails"), "documents": count("SELECT COUNT(*) FROM documents"),
                        "whatsapp_messages": count("SELECT COUNT(*) FROM wa_messages")}}
 
@@ -154,6 +169,7 @@ def verify(mode: str = Query("", alias="hub.mode"), token: str = Query("", alias
 @app.post("/api/webhooks/whatsapp")
 async def receive(request: Request):
     body = await request.body()
+<<<<<<< HEAD
     from datetime import datetime, timezone
     WEBHOOK.update(calls=WEBHOOK["calls"] + 1, last=datetime.now(timezone.utc).strftime("%H:%M:%S"),
                    result="rejected, bad signature (check META_APP_SECRET)")
@@ -161,11 +177,16 @@ async def receive(request: Request):
         log.warning("whatsapp webhook rejected: bad or missing signature. Check META_APP_SECRET is this app's App secret.")
         raise HTTPException(401, "bad signature")
     WEBHOOK["result"] = "signature ok, but the body was not JSON"
+=======
+    if not whatsapp.signature_ok(body, request.headers.get("x-hub-signature-256")):
+        raise HTTPException(401, "bad signature")
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     try:
         payload = json.loads(body)
     except ValueError:
         raise HTTPException(400, "not JSON")
     result = whatsapp.ingest(payload)
+<<<<<<< HEAD
     statuses = sum(len((c.get("value") or {}).get("statuses", [])) for e in payload.get("entry", []) for c in e.get("changes", []))
     WEBHOOK["result"] = (f"stored {result['stored']}, dropped {result['dropped']} "
                          f"(direct chats {result['direct_dropped']}), status updates {statuses}")
@@ -173,6 +194,9 @@ async def receive(request: Request):
              result["direct_dropped"])  # counts only
     if result["direct_dropped"]:
         log.info("direct (1:1) chats are dropped; set WHATSAPP_ALLOW_DIRECT=true to keep them while testing")
+=======
+    log.info("whatsapp webhook stored=%s dropped=%s", result["stored"], result["dropped"])  # counts only
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     return {"ok": True}
 
 
@@ -202,6 +226,7 @@ async def no_stale_ui(request: Request, call_next):
 
 
 app.mount("/static", StaticFiles(directory=WEB), name="static")
+<<<<<<< HEAD
 if (DIST / "assets").exists():
     app.mount("/assets", StaticFiles(directory=DIST / "assets"), name="assets")
 
@@ -217,10 +242,13 @@ def legal():
 @app.get("/classic")
 def classic():
     return FileResponse(WEB / "index.html")
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 
 
 @app.get("/")
 def home():
+<<<<<<< HEAD
     return FileResponse(DIST / "index.html" if (DIST / "index.html").exists() else WEB / "index.html")
 
 
@@ -233,3 +261,6 @@ def spa(path: str):
     if file.is_file() and DIST.resolve() in file.parents:
         return FileResponse(file)
     return FileResponse(DIST / "index.html")
+=======
+    return FileResponse(WEB / "index.html")
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3

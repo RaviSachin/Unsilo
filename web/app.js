@@ -90,7 +90,11 @@ async function ask(q) {
     $('#answer').innerHTML = `
       <div class="card answer ${a.answerable ? '' : 'none'}">
         <div class="head"><span class="muted">${esc(a.question)}</span>
+<<<<<<< HEAD
           ${a.answerable ? badge(a.mode === 'chat' ? 'hello' : a.mode === 'ai' ? 'grounded answer' : a.mode === 'closest' ? 'closest match' : a.mode === 'overview' ? 'summary' : 'top records', 'lime') : badge(a.mode === 'empty' ? 'no data yet' : 'no data found', 'orange')}</div>
+=======
+          ${a.answerable ? badge(a.mode === 'chat' ? 'hello' : a.mode === 'ai' ? 'grounded answer' : 'top records', 'lime') : badge(a.mode === 'empty' ? 'no data yet' : 'not in the data', 'orange')}</div>
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
         <p class="text">${text}</p>
         ${a.citations.length ? '<p class="label">Receipts</p>' : ''}
         ${a.citations.map((c, i) => `

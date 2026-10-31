@@ -22,8 +22,11 @@ def _group_of(msg: dict, value: dict) -> tuple[str | None, str | None]:
     group = msg.get("group") or {}
     gid = msg.get("group_id") or group.get("id") or value.get("group_id") or (msg.get("context") or {}).get("group_id")
     name = group.get("subject") or group.get("name") or value.get("group_name")
+<<<<<<< HEAD
     if not gid and not name and settings.ALLOW_DIRECT:
         return settings.DIRECT_GROUP["id"], settings.DIRECT_GROUP["name"]
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     return gid, name
 
 
@@ -54,7 +57,11 @@ def _participant(gid: str, wa_id: str | None, name: str | None) -> None:
 
 
 def ingest(payload: dict) -> dict:
+<<<<<<< HEAD
     stored = dropped = direct_dropped = 0
+=======
+    stored = dropped = 0
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     now = datetime.now(timezone.utc).isoformat()
     for entry in payload.get("entry", []):
         for change in entry.get("changes", []):
@@ -71,7 +78,10 @@ def ingest(payload: dict) -> dict:
                 cfg = selected(gid, gname)
                 if not cfg:
                     dropped += 1  # not selected: never stored, never logged
+<<<<<<< HEAD
                     direct_dropped += not (gid or gname)  # 1:1 chat (no group at all), counted for debugging
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
                     continue
                 gid, gname = gid or cfg.get("id") or f"name:{gname}", gname or cfg.get("name")
                 conn.execute("INSERT INTO wa_raw (received_at, group_id, payload) VALUES (?,?,?)",
@@ -86,7 +96,11 @@ def ingest(payload: dict) -> dict:
                          f"{sender or ''} ({msg.get('from')})", "", sent_at)
                 stored += 1
     conn.commit()
+<<<<<<< HEAD
     return {"stored": stored, "dropped": dropped, "direct_dropped": direct_dropped}
+=======
+    return {"stored": stored, "dropped": dropped}
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 
 
 def load_participants(data) -> int:

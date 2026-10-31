@@ -24,6 +24,7 @@ uvicorn app.main:app --reload --port 8000
 
 Open **http://localhost:8000**. The UI and the API run on the same port, so there is no separate frontend build.
 
+<<<<<<< HEAD
 
 ## New React UI (Unsilo 1.0)
 
@@ -43,6 +44,8 @@ npm run build      # then http://localhost:8000 serves the built UI (old UI at /
 New read-only API endpoints for the UI: `GET /api/emails`, `GET /api/emails/{id}`, `GET /api/documents`.
 See `frontend/README.md` for pages and shortcuts.
 
+=======
+>>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 ## Connect the sources
 
 | Source | What to set in `.env` | Then |
