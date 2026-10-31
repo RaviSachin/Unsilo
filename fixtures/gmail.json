@@ -1,0 +1,261 @@
+[
+  {
+    "message_id": "m01",
+    "thread_id": "t01",
+    "from_addr": "purchase@shreeconstructions.in",
+    "from_name": "Anil Kulkarni",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Enquiry: 2 excavators for Hinjewadi site",
+    "body": "Hi, we need two 20-ton excavators for 45 days starting 1 Nov at Hinjewadi Phase 3. Please share your best rental rate and availability.",
+    "sent_at": "2026-10-08T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": []
+  },
+  {
+    "message_id": "m02",
+    "thread_id": "t01",
+    "from_addr": "ops@e9sandbox.example",
+    "from_name": "E9 Ops",
+    "to": [
+      "purchase@shreeconstructions.in"
+    ],
+    "cc": [],
+    "subject": "Re: Enquiry: 2 excavators for Hinjewadi site",
+    "body": "Dear Anil, thanks. Quotation attached: Rs 1,85,000 per machine per month, operator included.",
+    "sent_at": "2026-10-09T10:00:00+00:00",
+    "label_ids": [
+      "SENT"
+    ],
+    "attachments": [
+      {
+        "filename": "Quotation_Shree_Excavators.pdf",
+        "mime_type": "application/pdf",
+        "size": 20000,
+        "text": "QUOTATION No Q-2291 Excavator 20T x2 Rs 1,85,000 per month"
+      }
+    ]
+  },
+  {
+    "message_id": "m03",
+    "thread_id": "t01",
+    "from_addr": "purchase@shreeconstructions.in",
+    "from_name": "Anil Kulkarni",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Re: Enquiry: 2 excavators for Hinjewadi site",
+    "body": "Rate is acceptable. Please find our purchase order attached. Kindly confirm dispatch date.",
+    "sent_at": "2026-10-11T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": [
+      {
+        "filename": "PO-SC-4471.pdf",
+        "mime_type": "application/pdf",
+        "size": 20000,
+        "text": "PURCHASE ORDER PO-SC-4471 Shree Constructions 2 x Excavator 20T"
+      }
+    ]
+  },
+  {
+    "message_id": "m04",
+    "thread_id": "t04",
+    "from_addr": "rohit@metrobuildcorp.com",
+    "from_name": "Rohit Shah",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Crane rental quote needed urgently",
+    "body": "Can you quote for a 50-ton mobile crane for 10 days at Kharadi? Need it by next Monday.",
+    "sent_at": "2026-10-13T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": []
+  },
+  {
+    "message_id": "m05",
+    "thread_id": "t05",
+    "from_addr": "hello@buzzmedia.agency",
+    "from_name": "Buzz Media",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "October social media campaign report",
+    "body": "Attached is the campaign performance for the Instagram and LinkedIn ads. Reach 48k, 312 leads.",
+    "sent_at": "2026-10-14T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": [
+      {
+        "filename": "campaign_report_oct.pdf",
+        "mime_type": "application/pdf",
+        "size": 20000,
+        "text": "Campaign report Instagram LinkedIn ads reach"
+      }
+    ]
+  },
+  {
+    "message_id": "m06",
+    "thread_id": "t06",
+    "from_addr": "accounts@deccaninfra.in",
+    "from_name": "Deccan Infra Accounts",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Invoice INV-7781 payment status",
+    "body": "Please confirm when payment for invoice INV-7781 (Rs 3,40,000) for the backhoe loader rental will be released.",
+    "sent_at": "2026-10-12T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": [
+      {
+        "filename": "INV-7781.pdf",
+        "mime_type": "application/pdf",
+        "size": 20000,
+        "text": "TAX INVOICE INV-7781 Backhoe loader rental Rs 3,40,000"
+      }
+    ]
+  },
+  {
+    "message_id": "m07",
+    "thread_id": "t06",
+    "from_addr": "ops@e9sandbox.example",
+    "from_name": "E9 Ops",
+    "to": [
+      "accounts@deccaninfra.in"
+    ],
+    "cc": [],
+    "subject": "Re: Invoice INV-7781 payment status",
+    "body": "Payment has been scheduled for 25 Oct.",
+    "sent_at": "2026-10-13T10:00:00+00:00",
+    "label_ids": [
+      "SENT"
+    ],
+    "attachments": []
+  },
+  {
+    "message_id": "m08",
+    "thread_id": "t08",
+    "from_addr": "kyc@patilenterprises.co.in",
+    "from_name": "Patil Enterprises",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "KYC documents for vendor onboarding",
+    "body": "As requested, attaching our GST certificate and PAN card copy for verification.",
+    "sent_at": "2026-10-14T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": [
+      {
+        "filename": "GST_Certificate_Patil.pdf",
+        "mime_type": "application/pdf",
+        "size": 20000,
+        "text": "GSTIN 27ABCDE1234F1Z5 certificate of registration"
+      },
+      {
+        "filename": "PAN_Patil.jpg",
+        "mime_type": "image/jpeg",
+        "size": 20000,
+        "text": ""
+      }
+    ]
+  },
+  {
+    "message_id": "m09",
+    "thread_id": "t09",
+    "from_addr": "events@constructionexpo.in",
+    "from_name": "Construction Expo",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Booth booking for Pune Construction Expo 2026",
+    "body": "Book your stall at the Pune Construction Expo. Early bird pricing ends soon. Brochure attached.",
+    "sent_at": "2026-10-10T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": [
+      {
+        "filename": "Expo_brochure.pdf",
+        "mime_type": "application/pdf",
+        "size": 20000,
+        "text": "brochure exhibition stall sizes"
+      }
+    ]
+  },
+  {
+    "message_id": "m10",
+    "thread_id": "t10",
+    "from_addr": "it-support@e9sandbox.example",
+    "from_name": "IT Support",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Scheduled password reset",
+    "body": "Your mailbox password will expire in 3 days.",
+    "sent_at": "2026-10-17T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": []
+  },
+  {
+    "message_id": "m11",
+    "thread_id": "t11",
+    "from_addr": "sunita@greenfieldhomes.in",
+    "from_name": "Sunita Rao",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "Rental agreement draft for 3 JCBs",
+    "body": "Please review the attached rental agreement draft and confirm the terms by Friday.",
+    "sent_at": "2026-10-18T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": [
+      {
+        "filename": "Rental_Agreement_Greenfield.docx",
+        "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 20000,
+        "text": "RENTAL AGREEMENT between Greenfield Homes and E9 for 3 JCB backhoe loaders"
+      }
+    ]
+  },
+  {
+    "message_id": "m12",
+    "thread_id": "t12",
+    "from_addr": "newsletter@infraweekly.com",
+    "from_name": "Infra Weekly",
+    "to": [
+      "ops@e9sandbox.example"
+    ],
+    "cc": [],
+    "subject": "This week in infrastructure",
+    "body": "Top stories: metro line 3 progress, cement prices, new tender notices.",
+    "sent_at": "2026-10-05T10:00:00+00:00",
+    "label_ids": [
+      "INBOX"
+    ],
+    "attachments": []
+  }
+]
