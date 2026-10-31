@@ -1,0 +1,46 @@
+{
+  "groups": [
+    {
+      "group_id": "120363000000000001@g.us",
+      "name": "Site Team Pune",
+      "participants": [
+        {
+          "wa_id": "919800000001",
+          "name": "Ravi (Site Lead)"
+        },
+        {
+          "wa_id": "919800000002",
+          "name": "Meena (Ops)"
+        },
+        {
+          "wa_id": "919800000004",
+          "name": "Gaurav (Driver)"
+        }
+      ]
+    },
+    {
+      "group_id": "120363000000000002@g.us",
+      "name": "Sales Leads",
+      "participants": [
+        {
+          "wa_id": "919800000002",
+          "name": "Meena (Ops)"
+        },
+        {
+          "wa_id": "919800000003",
+          "name": "Sachin (Sales)"
+        }
+      ]
+    },
+    {
+      "group_id": "120363000000000099@g.us",
+      "name": "Weekend Plans",
+      "participants": [
+        {
+          "wa_id": "919800000009",
+          "name": "Personal Friend"
+        }
+      ]
+    }
+  ]
+}
