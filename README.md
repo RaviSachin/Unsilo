@@ -4,96 +4,144 @@
 
 **Ask your WhatsApp, Gmail and Drive anything. Every answer shows its receipts.**
 
-Unsilo reads a company's three silos through the official read-only APIs, makes sense of each one,
-and answers plain-English questions across all of them. Each answer cites the email, document or
-WhatsApp message it came from, and says "not in the data" instead of guessing.
+Unsilo brings read-only Gmail, Google Drive and selected WhatsApp business information into one searchable workspace. The React frontend is designed for construction, equipment-rental and field operations.
 
-## Run it
+## Project structure
 
-Python 3.11+.
+```text
+unsilo/
+├── frontend/             # React + TypeScript + Vite source
+│   ├── src/
+│   │   ├── components/   # Reusable UI and 3D equipment scene
+│   │   ├── App.tsx       # Single-page application
+│   │   ├── type.ts       # API types and shared helpers
+│   │   └── style.ts      # Shared style tokens
+│   ├── package.json
+│   └── vite.config.ts
+├── web/                  # Production frontend build served by FastAPI
+├── src/app/              # FastAPI backend and API routes
+├── config/               # WhatsApp selected-groups configuration
+├── fixtures/             # Sample/demo input data
+├── outputs/              # Generated JSON reports (created at runtime)
+├── tests/
+├── requirements.txt
+└── README.md
+```
 
-```bash
+## Requirements
+
+- Python 3.11+
+- Node.js 20+ and npm
+
+## Run in development mode
+
+### 1. Configure and start the backend
+
+Open PowerShell in the `unsilo` project folder:
+
+```powershell
 python -m venv .venv
-source .venv/bin/activate              # Windows: .venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-cp .env.example .env                   # then fill in the values (see below)
+Copy-Item .env.example .env
+```
 
+Add your own credentials/configuration to `.env` if you want live Google, WhatsApp or AI integrations.
+
+Start FastAPI:
+
+```powershell
 cd src
 uvicorn app.main:app --reload --port 8000
 ```
 
-Open **http://localhost:8000**. The UI and the API run on the same port, so there is no separate frontend build.
+Backend API docs: http://localhost:8000/docs
 
-## Connect the sources
+### 2. Start the React frontend
 
-| Source | What to set in `.env` | Then |
-| --- | --- | --- |
-| Gmail + Drive (OAuth) | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `SANDBOX_EMAIL`. Redirect URI in Google Cloud: `http://localhost:8000/api/oauth/google/callback` | **Sources → Connect Google**, sign in, then **Sync Gmail** / **Sync Drive** |
-| Drive (no OAuth) | `DRIVE_API_KEY` + `DRIVE_FOLDER_ID` of a folder shared as "Anyone with the link" | **Sync Drive** |
-| WhatsApp | `WHATSAPP_VERIFY_TOKEN`, `META_APP_SECRET`; real group ids or names in `config/selected_groups.json` | `cloudflared tunnel --url http://localhost:8000`, give Meta `https://<tunnel>/api/webhooks/whatsapp` + the verify token |
-| AI answers | `GEMINI_API_KEY` (optional) | Without it, labels use keyword rules and answers list the top cited records |
-| Dates | `REFERENCE_DATE=YYYY-MM-DD` (from kickoff) | Used for "unanswered for 5+ days" and "last month" |
+Open a **second terminal** in the `unsilo` project folder:
 
-A Google API key (`AIza…`) cannot read Gmail; Google only accepts OAuth for mailboxes.
-Opening the webhook URL in a browser returns 403. That is expected: only Meta's request carries the verify token.
-
-## Outputs
-
-**Outputs → Write outputs/ files** (or `POST /api/export`) writes:
-
-- `outputs/whatsapp_output.json`: selected groups, participants, messages, summary, asks, commitments, decisions, action items
-- `outputs/gmail_output.json`: team label (sales / marketing / other) with reason, unanswered emails (5+ days), business-critical attachments with reason
-- `outputs/drive_output.json`: one category per document (sales / marketing / verification / office / accounts) with a one-line reason
-
-## How it works
-
-```
-WhatsApp webhook ──(HMAC check, selected groups only)──┐
-Gmail API (gmail.readonly) ────────────────────────────┼─> SQLite ─> analysis (Gemini or rules) ─> outputs/*.json
-Drive API (drive.readonly, PDF/DOCX/XLSX/Docs/Sheets) ─┘      │
-                                                              └─> FTS5 BM25 index ─> /api/ask ─> grounded answer + citations
+```powershell
+cd frontend
+npm install
+npm run dev
 ```
 
-| File | Job |
-| --- | --- |
-| `src/app/settings.py` | Every setting from `.env`; the two allowed Google scopes |
-| `src/app/db.py` | SQLite tables and the search index |
-| `src/app/whatsapp.py` | Webhook signature check, selected-groups filter, message storage |
-| `src/app/google.py` | OAuth (state + scope check), Gmail sync, Drive sync |
-| `src/app/extract.py` | Text from PDF, Word, Excel, CSV |
-| `src/app/ai.py` | Gemini JSON calls with model fallback; returns nothing when no key |
-| `src/app/analyse.py` | Email teams, unanswered, attachment flags, Drive categories, WhatsApp interpretation |
-| `src/app/ask.py` | Date-aware search and grounded answers (no valid citation means "I don't know") |
-| `src/app/export.py` | The three output files |
-| `src/app/main.py` | API routes and the UI |
-| `web/` | One-page UI (Ask, Sources, Gmail, Drive, WhatsApp, Outputs) |
+Open the Vite URL shown in the terminal, normally http://localhost:5173.
 
-## API
+The Vite development server proxies `/api` requests to `http://localhost:8000`, so the React app uses the existing FastAPI backend.
+
+## Build React for the FastAPI web route
+
+To serve the React frontend directly from **http://localhost:8000**:
+
+```powershell
+cd frontend
+npm install
+npm run build
+```
+
+The Vite build is configured to write production files into `../web`. FastAPI already serves that directory at `/static` and returns `web/index.html` at `/`.
+
+Then start/restart the backend from `src`:
+
+```powershell
+cd ..\src
+uvicorn app.main:app --reload --port 8000
+```
+
+Run `npm run build` again whenever you change the React frontend and want those changes reflected on the FastAPI root URL.
+
+## Frontend features
+
+- React + TypeScript single-page application.
+- Vite development server and production build.
+- Framer Motion page and interaction animations.
+- Three.js / React Three Fiber animated excavator scene.
+- Collapsible sidebar and construction/rental visual theme.
+- Gmail-inspired inbox, category filters, search and message preview.
+- Drive-inspired file library with image/video thumbnails and media preview.
+- Ask Unsilo, Connections, WhatsApp/site updates and Reports views.
+- Lucide icon set and shared TypeScript API contracts.
+
+## Existing backend API routes used
+
+The React app calls the existing FastAPI routes; it does not require a separate backend:
 
 | Method | Path | Purpose |
 | --- | --- | --- |
-| GET | `/api/health` | AI mode, Google status, counts, reference date |
-| GET | `/api/oauth/google/start` · `/callback` | Google sign-in |
-| POST | `/api/sync/gmail` · `/api/sync/drive` | Pull and analyse a source |
+| GET | `/api/health` | Backend and connection status |
+| GET | `/api/oauth/google/start` | Start Google OAuth |
+| POST | `/api/sync/gmail` | Sync Gmail |
+| POST | `/api/sync/drive` | Sync Drive |
 | POST | `/api/analyse` | Re-run analysis |
-| POST | `/api/ask` | `{"question": "..."}` → answer, citations, search details |
-| GET | `/api/outputs/{whatsapp,gmail,drive}` | Output preview |
-| POST | `/api/export` | Write `outputs/*.json` |
-| GET/POST | `/api/webhooks/whatsapp` | Meta verification · events |
-| GET | `/api/whatsapp/groups` | Groups with messages and interpretation |
-| POST | `/api/whatsapp/participants` | Load organiser-provided participant lists |
+| POST | `/api/ask` | Ask a question across connected sources |
+| GET | `/api/outputs/gmail` | Gmail analysis output |
+| GET | `/api/outputs/drive` | Drive analysis output |
+| GET | `/api/outputs/whatsapp` | WhatsApp analysis output |
+| GET | `/api/whatsapp/groups` | WhatsApp groups and messages |
+| POST | `/api/export` | Generate output JSON files |
 
-## Security and rules
+## Live integrations
 
-- Google scopes are exactly `gmail.readonly` and `drive.readonly`; the callback rejects anything else.
-- Read-only: no send, delete, label or modify calls anywhere.
-- WhatsApp: official Cloud API webhooks only, every POST checked with `X-Hub-Signature-256`.
-  Messages from groups not in `selected_groups.json` are dropped before storage; logs hold counts only.
-- Secrets live in `.env` (gitignored). The Google token is stored in `data/` (gitignored).
+1. Copy `.env.example` to `.env` and enter your own credentials.
+2. Configure Google OAuth redirect URI as `http://localhost:8000/api/oauth/google/callback`.
+3. Start the backend and connect Google from the Connections screen.
+4. Sync Gmail and Drive from the UI.
+5. Configure the WhatsApp Cloud API webhook and selected group IDs as described in `.env.example` and `config/selected_groups.json`.
 
-## Known limitations
+## Important data notes
 
-- The exact WhatsApp group-id field depends on the organiser's setup; `whatsapp._group_of()` checks several places.
-- Output JSON shapes follow the task text; adjust `export.py` if the organisers share a schema.
-- Keyword-rule labels are rough; set `GEMINI_API_KEY` for the AI path.
-- Images and scanned PDFs are not OCR'd.
+- The Gmail endpoint currently returns message metadata and attachment metadata, not the original email body. The UI does not invent email content.
+- The Drive endpoint returns file IDs, MIME types and Drive URLs. Thumbnail rendering depends on Google Drive permissions and file availability.
+- The frontend performs no Gmail send/delete/label operations and no Drive modification operations.
+- Local `.env`, OAuth tokens, runtime databases and generated reports are not included in this source archive. Create/configure them locally.
+
+## Tests
+
+From the `unsilo` project folder:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+pytest -q
+```

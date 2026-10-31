@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-30T10:17:48.476062+00:00",
+  "generated_at": "2026-10-31T10:48:12.588707+00:00",
   "documents": [
     {
       "file_id": "13TGWsh9QM7UXfzxj6SPpCbbDo2u1O-Gt",
       "name": "2021-10-27 09-08-05.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/13TGWsh9QM7UXfzxj6SPpCbbDo2u1O-Gt/view?usp=drivesdk",
-      "category": "office",
-      "reason": "The file is a video recording which typically falls under general administrative or office media.",
+      "category": "marketing",
+      "reason": "Video files of this type are typically used for promotional campaigns, brand content, or event recordings.",
       "extraction_error": null
     },
     {
@@ -15,8 +15,8 @@
       "name": "2021-10-28 09-04-31.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1G2q1sSMbYti3bI_YK1v4kzZ1dcmNTjrx/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this nature typically correspond to marketing campaigns, events, or brand promotions.",
+      "category": "office",
+      "reason": "The file name suggests a meeting recording or media asset commonly handled under office administration.",
       "extraction_error": null
     },
     {
@@ -25,7 +25,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/15TArZykRTgyDg59fP12AL0J7xPXLt1dO/view?usp=drivesdk",
       "category": "marketing",
-      "reason": "Video files of this nature typically correspond to marketing campaigns or events.",
+      "reason": "The file is a video recording which typically relates to promotional content, events, or social media campaigns.",
       "extraction_error": null
     },
     {
@@ -34,7 +34,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1dRFm8l8UoeDjLvjjygz7NxDBTtP4Kgga/view?usp=drivesdk",
       "category": "marketing",
-      "reason": "The file is a video which is typically used for marketing events, campaigns, or social media content.",
+      "reason": "Video files of this nature are typically used for promotional campaigns, events, or brand collateral.",
       "extraction_error": null
     },
     {
@@ -43,7 +43,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1J7HFiBofLfYk1KXE0uq5pTVaNQWk60pX/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context are typically classified under general office media or miscellaneous administration.",
+      "reason": "Video files without context are typically classified under general office media or recordings.",
       "extraction_error": null
     },
     {
@@ -52,7 +52,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1RwuHqmFm5Rteyw076qnpYmcdfAlW4ju4/view?usp=drivesdk",
       "category": "marketing",
-      "reason": "Video file formats are commonly used for marketing campaigns, events, or brand promotions.",
+      "reason": "Video file formats are commonly used for marketing campaigns, brochures, or events.",
       "extraction_error": null
     },
     {
@@ -60,8 +60,8 @@
       "name": "2021-11-10 10-01-15.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1bn-tsVmz0xOkTyfQe6vhTmq9b90pXgnl/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this nature typically correspond to promotional material, brand assets, or event recordings.",
+      "category": "office",
+      "reason": "Video files without clear sales or financial context typically fall under general administrative or office records.",
       "extraction_error": null
     },
     {
@@ -69,8 +69,8 @@
       "name": "2021-11-11 09-06-07.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1p7q0ZsaxmHgxPASjRUpLaZXvAxu7C285/view?usp=drivesdk",
-      "category": "office",
-      "reason": "Timestamped screen or meeting recording typically associated with internal office procedures, training, or minutes.",
+      "category": "marketing",
+      "reason": "Video files of this nature are typically used for promotional events, brand campaigns, or social media content.",
       "extraction_error": null
     },
     {
@@ -78,8 +78,8 @@
       "name": "2021-11-18 09-29-35.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1e8gl54kb_y0Fwq9NcFP_pXbSwiAHOhG9/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this nature typically correspond to marketing events, campaigns, or promotional materials.",
+      "category": "office",
+      "reason": "The file is a video recording which typically falls under general office media or meetings.",
       "extraction_error": null
     },
     {
@@ -88,7 +88,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1MOZQtjPpm8tIb0sjUDjHzu9PrOHpG2C9/view?usp=drivesdk",
       "category": "office",
-      "reason": "Multimedia files without explicit context default to general administrative or office documentation.",
+      "reason": "The filename suggests a generic video recording often associated with internal meetings or administrative purposes.",
       "extraction_error": null
     },
     {
@@ -97,7 +97,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1AqCTrw1ukru0a1TeWdxI3xpzTO2MK4Ph/view?usp=drivesdk",
       "category": "marketing",
-      "reason": "Video files of this nature typically correspond to promotional events or social media content.",
+      "reason": "Video file formats are commonly used for promotional campaigns, events, or brand collateral.",
       "extraction_error": null
     },
     {
@@ -106,7 +106,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1x4pAwHxG2w7cVrj5cK4wytczaBeXI_0H/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context are typically classified under general office administration or media storage.",
+      "reason": "Video file formats without clear context default to general administrative or office use.",
       "extraction_error": null
     },
     {
@@ -115,7 +115,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1iJjUNgH6qrpEXceEyEXmHfkoGcfmnwqX/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file is a generic video recording which typically falls under general office media or admin assets.",
+      "reason": "The file is an unlabelled video recording likely related to general office or administrative activities.",
       "extraction_error": null
     },
     {
@@ -123,8 +123,8 @@
       "name": "2021-11-29 08-24-01.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1iFwLdTmeFKqyv2pfTvMChChH7jq0qaNV/view?usp=drivesdk",
-      "category": "office",
-      "reason": "The file is a video recording which typically corresponds to office meetings, events, or internal documentation.",
+      "category": "marketing",
+      "reason": "The video file format and naming convention typically indicate event recordings or promotional media assets.",
       "extraction_error": null
     },
     {
@@ -132,8 +132,8 @@
       "name": "2021-11-29 08-41-09.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1v3_Y51M0o_5wuPxxrGS1vW8rHJHTVwHF/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video file containing promotional or event content typically handled by marketing.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -151,7 +151,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/10Am-DSaF16Ew1OxsstP8YsxwT-qm6zzq/view?usp=drivesdk",
       "category": "office",
-      "reason": "The media file format and timestamp suggest a recorded meeting or event which falls under office administration.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -160,7 +160,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1KNsf-KmMklQVm-s3t09Kb2nTL77hTcMr/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file is an untagged video recording which typically falls under general administrative or office media.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -169,7 +169,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1mx9ZUNzhiT6MBH4aTvoFaRQtIU_kdy1p/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context are typically categorized under general office administration or media assets.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -177,8 +177,8 @@
       "name": "2021-12-06 08-17-43.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1SXrftkVwG076ZfVNgaQ_VEG9rm2eIaBR/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this type are typically used for promotional campaigns, social media, or event recordings.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -187,7 +187,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1NEyAxSGXIhz7OhmvefgTRLUj1kQlm2vZ/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context are typically classified under general office media or recordings.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -196,7 +196,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/18tqWaqCeBy2idHsnqQJpPT5zFZlKMorG/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file type and name lack specific business context, but unclassified multimedia in a standard office setting defaults to general administrative or media records.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -204,8 +204,8 @@
       "name": "2021-12-13 08-22-46.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1GBD_ahXXPYGO87LvydzSD60K-U1cs6sr/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this nature are typically used for campaigns, events, or social media content.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -214,7 +214,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1t1YGxmqFu2yNoO_MiIYXJLtzh4N-Xzj0/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file is a generic video recording which typically falls under general administrative or office media.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -232,7 +232,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1rrx-E__kNtLRcfO2mQ8ul023k_vEEwXc/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file is a video recording which typically falls under general administrative or office media.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -240,8 +240,8 @@
       "name": "2021-12-24 07-03-33.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1FWwDPG10Q5x5YW2z-fVc9R85PyMnSwmV/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this type are typically associated with marketing campaigns, social media, or event recordings.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -250,7 +250,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1OyForTZ-QsxkKMy-l6cXLZD_Yx1FbBTS/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context are typically classified under general office or admin records.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -259,7 +259,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1Px0x7zeWTL3l_gTsMYPh5pL4RlidfZm6/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file is an administrative video recording of a meeting or event.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -268,7 +268,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1pZyb6yyWrRONZO61wf802JZCy4dAGUK3/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context typically fall under general office or admin records.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -276,8 +276,8 @@
       "name": "2021-12-29 07-08-08.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1yb66g-nJTPUfaeNAyKjnnAq5e4eUVdPZ/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this type are typically used for marketing campaigns, events, or social media content.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -285,8 +285,8 @@
       "name": "2021-12-30 07-07-44.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1a9E0JgVsqK2zgohIN8El4eKaJLBJlk2G/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files of this nature typically correspond to promotional media, events, or campaign assets.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -295,7 +295,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1cW56LFTEWnDDhyKQEtBzXLmg8tBgJWlN/view?usp=drivesdk",
       "category": "office",
-      "reason": "Video files without context are typically classified under general office media or recordings.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -304,7 +304,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1ihrB4eWHPXCoVWZ3fwNBsBBJ9nZyhJW8/view?usp=drivesdk",
       "category": "office",
-      "reason": "Timestamped video files without explicit business context are typically classified under general administrative or office media.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -312,8 +312,8 @@
       "name": "2022-01-07 07-03-36.mp4",
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1vagl41320562PAiJ1aDmtWOI7I4n-RAo/view?usp=drivesdk",
-      "category": "marketing",
-      "reason": "Video files without context are typically used for marketing campaigns or events.",
+      "category": "office",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     },
     {
@@ -322,7 +322,7 @@
       "mime_type": "video/mp4",
       "url": "https://drive.google.com/file/d/1255coCNtxfOu-GNPjH2XG8OY5oqripMG/view?usp=drivesdk",
       "category": "office",
-      "reason": "The file appears to be a training video or educational recording related to JavaScript and ReactJS, which falls under internal skill development or office resources.",
+      "reason": "No strong signals; defaulted to office.",
       "extraction_error": null
     }
   ]

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T10:17:48.473594+00:00",
-  "reference_date": "2026-10-30",
+  "generated_at": "2026-10-31T10:48:12.582389+00:00",
+  "reference_date": "2026-10-31",
   "emails": [
     {
       "message_id": "17f40fdd32cc3939",
@@ -9,7 +9,7 @@
       "subject": "🚀 Your GitHub launch code",
       "date": "2022-02-28T15:40:50+00:00",
       "classification": "other",
-      "classification_reason": "Automated account verification notification: 'GitHub launch code'",
+      "classification_reason": "account sign up notification, 'Continue signing up for GitHub'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -20,7 +20,7 @@
       "subject": "[GitHub] Please verify your device",
       "date": "2025-02-06T19:06:36+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security notification: 'Please verify your device'",
+      "classification_reason": "device verification security notification, 'Please verify your device'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -31,7 +31,7 @@
       "subject": "[GitHub] Please verify your device",
       "date": "2025-02-06T19:07:47+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security notification: 'Please verify your device'",
+      "classification_reason": "device verification security notification, 'Please verify your device'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -42,7 +42,7 @@
       "subject": "[GitHub] Please verify your device",
       "date": "2025-02-06T19:14:24+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security notification: 'Please verify your device'",
+      "classification_reason": "device verification security notification, 'Please verify your device'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -53,7 +53,7 @@
       "subject": "[GitHub] Please verify your device",
       "date": "2025-02-06T19:16:52+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security notification: 'Please verify your device'",
+      "classification_reason": "device verification security notification, 'Please verify your device'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -64,7 +64,7 @@
       "subject": "[GitHub] Please review this sign in",
       "date": "2025-02-06T19:17:07+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security alert: 'Please review this sign in'",
+      "classification_reason": "sign in review security notification, 'Please review this sign in'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -75,7 +75,7 @@
       "subject": "Verify your xAI email",
       "date": "2025-03-28T14:59:54+00:00",
       "classification": "other",
-      "classification_reason": "Automated account verification email: 'Verify your xAI email'",
+      "classification_reason": "email verification notification, 'Verify your xAI email'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -86,7 +86,7 @@
       "subject": "Verify your xAI email",
       "date": "2025-03-28T14:59:58+00:00",
       "classification": "other",
-      "classification_reason": "Automated account verification email: 'Verify your xAI email'",
+      "classification_reason": "email verification notification, 'Verify your xAI email'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -97,7 +97,7 @@
       "subject": "New login to your xAI account",
       "date": "2025-03-28T18:01:20+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security alert: 'New login to your xAI account'",
+      "classification_reason": "login security alert, 'New login to your xAI account'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -108,7 +108,7 @@
       "subject": "Your verification code for DeepSeek",
       "date": "2025-04-18T16:20:49+00:00",
       "classification": "other",
-      "classification_reason": "Automated verification notification: 'Your verification code for DeepSeek'",
+      "classification_reason": "verification code notification, 'Your verification code for DeepSeek'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -119,7 +119,7 @@
       "subject": "Thanks! Your first contribution is already making an impact",
       "date": "2026-10-23T18:40:34+00:00",
       "classification": "other",
-      "classification_reason": "External third-party notification: 'Thank you for writing a review'",
+      "classification_reason": "Google Maps contribution acknowledgment, 'Thank you for writing a review'",
       "important_attachment": false,
       "attachment_flags": []
     },
@@ -130,183 +130,194 @@
       "subject": "[GitHub] Sudo email verification code",
       "date": "2026-10-28T01:25:38+00:00",
       "classification": "other",
-      "classification_reason": "Automated system security notification: 'Sudo email verification code'",
+      "classification_reason": "sudo authentication notification, 'Sudo email verification code'",
       "important_attachment": false,
       "attachment_flags": []
     },
     {
-      "message_id": "1a180420771682f9",
-      "thread_id": "1a180420771682f9",
+      "message_id": "1a19062be1e3a0e6",
+      "thread_id": "1a19062be1e3a0e6",
+      "from": "noreply@github.com",
+      "subject": "[GitHub] Sudo email verification code",
+      "date": "2026-10-31T05:15:52+00:00",
+      "classification": "other",
+      "classification_reason": "GitHub sudo authentication code notification. Deciding words: GitHub sudo authentication code",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a190631496c9cb2",
+      "thread_id": "1a190631496c9cb2",
+      "from": "noreply@github.com",
+      "subject": "[GitHub] A first-party GitHub OAuth application has been added to your account",
+      "date": "2026-10-31T05:16:14+00:00",
+      "classification": "other",
+      "classification_reason": "GitHub OAuth application security notification. Deciding words: security events for your account",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a190778066d730c",
+      "thread_id": "1a190778066d730c",
+      "from": "no-reply@accounts.google.com",
+      "subject": "Security alert",
+      "date": "2026-10-31T05:38:30+00:00",
+      "classification": "other",
+      "classification_reason": "Google account security alert. Deciding words: Security alert",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a1908dec9e6b0ab",
+      "thread_id": "1a1908dec9e6b0ab",
+      "from": "noreply-accounts@google.com",
+      "subject": "You shared some Google Account data with Facebook",
+      "date": "2026-10-31T06:03:02+00:00",
+      "classification": "other",
+      "classification_reason": "Google account data sharing notification. Deciding words: You shared some Google Account data",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a19091ea8fa91fb",
+      "thread_id": "1a19091ea8fa91fb",
+      "from": "registration@facebookmail.com",
+      "subject": "85697 is your Facebook confirmation code",
+      "date": "2026-10-31T06:07:23+00:00",
+      "classification": "other",
+      "classification_reason": "Facebook confirmation code. Deciding words: confirmation code",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a190926a2efdc62",
+      "thread_id": "1a190926a2efdc62",
+      "from": "notification@facebookmail.com",
+      "subject": "Welcome to Facebook",
+      "date": "2026-10-31T06:07:55+00:00",
+      "classification": "other",
+      "classification_reason": "Facebook account creation welcome email. Deciding words: Your account has been created",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a19093b183e7f2a",
+      "thread_id": "1a19093b183e7f2a",
+      "from": "notification@facebookmail.com",
+      "subject": "Did you just add this phone number?",
+      "date": "2026-10-31T06:09:17+00:00",
+      "classification": "other",
+      "classification_reason": "Meta account security alert. Deciding words: Security alert: phone number added",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a1909418e6ee680",
+      "thread_id": "1a1909418e6ee680",
+      "from": "noreply@developers.facebook.com",
+      "subject": "Welcome to Facebook for Developers",
+      "date": "2026-10-31T06:09:46+00:00",
+      "classification": "other",
+      "classification_reason": "Facebook developers account registration. Deciding words: Facebook for Developers account is now registered",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a190a2d9fed3fdb",
+      "thread_id": "1a190a2d9fed3fdb",
+      "from": "security@facebookmail.com",
+      "subject": "Update to your Facebook mobile number",
+      "date": "2026-10-31T06:25:48+00:00",
+      "classification": "other",
+      "classification_reason": "Facebook mobile number update notification. Deciding words: Update to your Facebook mobile number",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a190a3a8add1ace",
+      "thread_id": "1a190a3a8add1ace",
+      "from": "security@facebookmail.com",
+      "subject": "Did you just log in near Pune on a new device?",
+      "date": "2026-10-31T06:26:42+00:00",
+      "classification": "other",
+      "classification_reason": "Facebook security login alert. Deciding words: Security alert: login near Pune",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a190a3cf83b4c3e",
+      "thread_id": "1a190a3cf83b4c3e",
+      "from": "security@facebookmail.com",
+      "subject": "Did you just move a new profile into your Meta Account?",
+      "date": "2026-10-31T06:26:53+00:00",
+      "classification": "other",
+      "classification_reason": "Meta account profile update security alert. Deciding words: new profile... was moved into the same Meta Account",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a1911727cd29dff",
+      "thread_id": "1a1911727cd29dff",
+      "from": "noreply-accounts@google.com",
+      "subject": "You shared some Google Account data with Meta",
+      "date": "2026-10-31T08:32:55+00:00",
+      "classification": "other",
+      "classification_reason": "Google account data sharing notification. Deciding words: You shared some Google Account data",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a1911e4e17997eb",
+      "thread_id": "1a1911e4e17997eb",
+      "from": "noreply@developers.facebook.com",
+      "subject": "New Developer Alert for unsilo-hackathon",
+      "date": "2026-10-31T08:40:41+00:00",
+      "classification": "other",
+      "classification_reason": "Developer notification from Facebook",
+      "important_attachment": false,
+      "attachment_flags": []
+    },
+    {
+      "message_id": "1a1912bd086657c6",
+      "thread_id": "1a1912bd086657c6",
       "from": "notification@facebookmail.com",
       "subject": "Confirm your business email address",
-      "date": "2026-10-28T02:06:06+00:00",
+      "date": "2026-10-31T08:55:19+00:00",
       "classification": "other",
-      "classification_reason": "Confirm your business email address",
+      "classification_reason": "Email confirmation notification from Facebook",
       "important_attachment": false,
       "attachment_flags": []
     },
     {
-      "message_id": "1a1804c6b9176b44",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T02:17:29+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template jaspers_market_... has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a1804c68de2b195",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T02:17:29+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template jaspers_market_... has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a1804c73d72d8a0",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T02:17:30+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template hello_world has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a1804c6717e2b72",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T02:17:30+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template jaspers_market_... has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a1804c648c3bfdf",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T02:17:30+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template jaspers_market_... has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a1807c3f92fc676",
-      "thread_id": "1a1807c3f92fc676",
-      "from": "notification@facebookmail.com",
-      "subject": "Your display name is ready for use.",
-      "date": "2026-10-28T03:09:44+00:00",
-      "classification": "marketing",
-      "classification_reason": "Your submitted display name Unsilo-hackathon for your WhatsApp Business account",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a1807c69573ee48",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T03:09:59+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template hello_world has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a18083cafb49394",
-      "thread_id": "1a1804c6717e2b72",
-      "from": "notification@facebookmail.com",
-      "subject": "Your WhatsApp message template state has been changed",
-      "date": "2026-10-28T03:17:59+00:00",
-      "classification": "marketing",
-      "classification_reason": "WhatsApp Message Template 3p_direct_integ... has been approved",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a180a3d2e344139",
-      "thread_id": "1a180a3d2e344139",
-      "from": "notification@facebookmail.com",
-      "subject": "Action needed to fix your message delivery issue",
-      "date": "2026-10-28T03:52:56+00:00",
-      "classification": "marketing",
-      "classification_reason": "A payment or account setup issue for your WhatsApp Business account",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a18bffc97795813",
-      "thread_id": "1a18bffc97795813",
-      "from": "no-reply@accounts.google.com",
-      "subject": "Security alert",
-      "date": "2026-10-30T08:49:15+00:00",
+      "message_id": "1a1917de233dc7d4",
+      "thread_id": "1a1917de233dc7d4",
+      "from": "noreply-accounts@google.com",
+      "subject": "You shared some Google Account data with ngrok",
+      "date": "2026-10-31T10:25:08+00:00",
       "classification": "other",
-      "classification_reason": "Security alert A new sign-in on Windows",
+      "classification_reason": "Google account security notification",
       "important_attachment": false,
       "attachment_flags": []
     },
     {
-      "message_id": "1a18bffc2b8c2a2f",
-      "thread_id": "1a18bffc2b8c2a2f",
-      "from": "no-reply@accounts.google.com",
-      "subject": "Your Google Account was recovered successfully",
-      "date": "2026-10-30T08:49:15+00:00",
+      "message_id": "1a1918461b15143f",
+      "thread_id": "1a1918461b15143f",
+      "from": "team@m.ngrok.com",
+      "subject": "Welcome to ngrok!",
+      "date": "2026-10-31T10:32:14+00:00",
       "classification": "other",
-      "classification_reason": "Your Google Account was recovered successfully",
+      "classification_reason": "Welcome email and IT tool notification from ngrok",
       "important_attachment": false,
       "attachment_flags": []
     },
     {
-      "message_id": "1a18c0edd609b9aa",
-      "thread_id": "1a18bffc97795813",
-      "from": "no-reply@accounts.google.com",
-      "subject": "Security alert",
-      "date": "2026-10-30T09:05:43+00:00",
+      "message_id": "1a1918d2756e2c54",
+      "thread_id": "1a1918d2756e2c54",
+      "from": "gauravsonawane838@gmail.com",
+      "subject": "Checking the result",
+      "date": "2026-10-31T10:41:37+00:00",
       "classification": "other",
-      "classification_reason": "It is an automated notification regarding \"Security alert\" and \"A new sign-in\".",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a18c0ed8aa89b21",
-      "thread_id": "1a18bffc97795813",
-      "from": "no-reply@accounts.google.com",
-      "subject": "Security alert",
-      "date": "2026-10-30T09:05:43+00:00",
-      "classification": "other",
-      "classification_reason": "It is an IT/security notification confirming \"Your password was changed\".",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a18c0ed5fee6a22",
-      "thread_id": "1a18bffc2b8c2a2f",
-      "from": "no-reply@accounts.google.com",
-      "subject": "Your Google Account was recovered successfully",
-      "date": "2026-10-30T09:05:43+00:00",
-      "classification": "other",
-      "classification_reason": "It is an automated IT notification about account security (\"Account recovered successfully\").",
-      "important_attachment": false,
-      "attachment_flags": []
-    },
-    {
-      "message_id": "1a18c145a411cd09",
-      "thread_id": "1a18bffc97795813",
-      "from": "no-reply@accounts.google.com",
-      "subject": "Security alert",
-      "date": "2026-10-30T09:11:44+00:00",
-      "classification": "other",
-      "classification_reason": "It is a security notification about \"A new sign-in on Windows\".",
+      "classification_reason": "General internal or testing message",
       "important_attachment": false,
       "attachment_flags": []
     }
@@ -318,7 +329,7 @@
       "from": "noreply@github.com",
       "subject": "🚀 Your GitHub launch code",
       "received_at": "2022-02-28T15:40:50+00:00",
-      "days_without_reply": 1704
+      "days_without_reply": 1706
     },
     {
       "message_id": "194dca83116c3177",
@@ -326,7 +337,7 @@
       "from": "noreply@github.com",
       "subject": "[GitHub] Please verify your device",
       "received_at": "2025-02-06T19:06:36+00:00",
-      "days_without_reply": 630
+      "days_without_reply": 632
     },
     {
       "message_id": "194dca94571986ba",
@@ -334,7 +345,7 @@
       "from": "noreply@github.com",
       "subject": "[GitHub] Please verify your device",
       "received_at": "2025-02-06T19:07:47+00:00",
-      "days_without_reply": 630
+      "days_without_reply": 632
     },
     {
       "message_id": "194dcaf4e79d784d",
@@ -342,7 +353,7 @@
       "from": "noreply@github.com",
       "subject": "[GitHub] Please verify your device",
       "received_at": "2025-02-06T19:14:24+00:00",
-      "days_without_reply": 630
+      "days_without_reply": 632
     },
     {
       "message_id": "194dcb193b2ef970",
@@ -350,7 +361,7 @@
       "from": "noreply@github.com",
       "subject": "[GitHub] Please verify your device",
       "received_at": "2025-02-06T19:16:52+00:00",
-      "days_without_reply": 630
+      "days_without_reply": 632
     },
     {
       "message_id": "194dcb1cc4fbfca4",
@@ -358,7 +369,7 @@
       "from": "noreply@github.com",
       "subject": "[GitHub] Please review this sign in",
       "received_at": "2025-02-06T19:17:07+00:00",
-      "days_without_reply": 630
+      "days_without_reply": 632
     },
     {
       "message_id": "195dd444e0179750",
@@ -366,7 +377,7 @@
       "from": "noreply@x.ai",
       "subject": "Verify your xAI email",
       "received_at": "2025-03-28T14:59:54+00:00",
-      "days_without_reply": 580
+      "days_without_reply": 582
     },
     {
       "message_id": "195dd445d7d85d79",
@@ -374,7 +385,7 @@
       "from": "noreply@x.ai",
       "subject": "Verify your xAI email",
       "received_at": "2025-03-28T14:59:58+00:00",
-      "days_without_reply": 580
+      "days_without_reply": 582
     },
     {
       "message_id": "195ddea6cd7e7f79",
@@ -382,7 +393,7 @@
       "from": "noreply@x.ai",
       "subject": "New login to your xAI account",
       "received_at": "2025-03-28T18:01:20+00:00",
-      "days_without_reply": 580
+      "days_without_reply": 582
     },
     {
       "message_id": "19649b3f1d6930c6",
@@ -390,7 +401,7 @@
       "from": "deepseek@tc.mail.deepseek.com",
       "subject": "Your verification code for DeepSeek",
       "received_at": "2025-04-18T16:20:49+00:00",
-      "days_without_reply": 559
+      "days_without_reply": 561
     },
     {
       "message_id": "1a16a109ed1d792e",
@@ -398,7 +409,7 @@
       "from": "google-maps-noreply@google.com",
       "subject": "Thanks! Your first contribution is already making an impact",
       "received_at": "2026-10-23T18:40:34+00:00",
-      "days_without_reply": 6
+      "days_without_reply": 8
     }
   ],
   "important_attachments": []
