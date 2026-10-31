@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unsilo · Privacy, Terms and Data Deletion</title>
+<style>
+  :root { --bg:#0e0c18; --card:#1a1726; --text:#ece9f5; --muted:#a8a2bd; --accent:#e94e9c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 80px; }
+  h1 { font-size: 30px; margin: 0 0 4px; }
+  h2 { margin: 0 0 12px; font-size: 22px; color: var(--accent); }
+  h3 { margin: 20px 0 6px; font-size: 17px; }
+  section { background: var(--card); border-radius: 16px; padding: 24px; margin-top: 24px; scroll-margin-top: 16px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  nav a { color: var(--accent); margin-right: 16px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Unsilo</h1>
+  <p class="muted">Last updated: 31 October 2026 · Contact: <a href="mailto:ravisachin36@gmail.com">ravisachin36@gmail.com</a></p>
+  <nav><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a><a href="#data-deletion">Data Deletion</a></nav>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>Unsilo is a hackathon prototype that lets a business ask questions across its own WhatsApp, Gmail and Google Drive data. This policy explains what we read, why, and how it is handled.</p>
+    <h3>What we access</h3>
+    <ul>
+      <li><b>Gmail</b>: read-only access (<code>gmail.readonly</code>) to the mailbox the account owner connects.</li>
+      <li><b>Google Drive</b>: read-only access (<code>drive.readonly</code>) to the folder the account owner chooses.</li>
+      <li><b>WhatsApp</b>: messages delivered to our webhook by the official WhatsApp Cloud API, kept only for groups the business has selected. Messages from any other chat are discarded before storage.</li>
+    </ul>
+    <h3>How we use it</h3>
+    <p>Data is used only to label emails and documents, summarise WhatsApp groups and answer the business's own questions, with citations to the original record. We never send, delete or change any email, file or message.</p>
+    <h3>Where it is stored</h3>
+    <p>Data is stored in a local database on the machine running Unsilo. Google sign-in tokens are stored on that machine only. We do not sell, rent or share data with third parties.</p>
+    <h3>AI processing</h3>
+    <p>When AI features are switched on, short excerpts of the relevant records are sent to Google Gemini to produce labels, summaries and answers. Only the text needed for that task is sent.</p>
+    <h3>Retention</h3>
+    <p>Data is kept only for the duration of the hackathon demo and is deleted afterwards, or earlier on request.</p>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of Service</h2>
+    <p>Unsilo is provided as a prototype, "as is", for demonstration during a hackathon. It must only be connected to accounts and WhatsApp groups you are authorised to use. Answers are generated from your data and may be incomplete; always check the cited source before acting on an answer. We may change or stop the service at any time.</p>
+  </section>
+
+  <section id="data-deletion">
+    <h2>Data Deletion Instructions</h2>
+    <p>To delete your data from Unsilo:</p>
+    <ol>
+      <li>Email <a href="mailto:ravisachin36@gmail.com?subject=Unsilo%20data%20deletion">ravisachin36@gmail.com</a> with the subject "Unsilo data deletion" and your phone number or email address.</li>
+      <li>We delete all stored messages, emails, documents and tokens linked to you within 7 days and reply to confirm.</li>
+      <li>You can also remove Unsilo's Google access at any time from <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>

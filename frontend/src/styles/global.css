@@ -1,0 +1,85 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: #09090b;
+  color: #f4f4f5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+::selection { background: rgba(255, 159, 28, 0.35); }
+
+/* Thin dark scrollbars */
+* { scrollbar-width: thin; scrollbar-color: #2a2a31 transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: #2a2a31; border-radius: 99px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+a { color: inherit; }
+code, pre, .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+.gradient-text {
+  background: linear-gradient(100deg, #ffd60a 0%, #ff9f1c 45%, #ff6b1a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #a1a1aa 0%, #fff 50%, #a1a1aa 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2.2s linear infinite;
+}
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+.hazard-stripes {
+  background: repeating-linear-gradient(-45deg, #ffd60a 0 12px, #111 12px 24px);
+}
+
+/* Subtle engineering grid behind pages */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 currentColor; opacity: 1; }
+  100% { box-shadow: 0 0 0 10px transparent; opacity: 1; }
+}
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes blink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+/* ---------- responsive helpers ---------- */
+img, video, iframe, svg, canvas { max-width: 100%; }
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  .MuiDialog-paper { margin: 0; }
+}
+@media (max-width: 380px) {
+  html { font-size: 14px; }
+}
+@media (min-width: 1920px) {
+  html { font-size: 17px; }
+}
+/* phones in landscape: keep dialogs usable */
+@media (max-height: 480px) and (orientation: landscape) {
+  .MuiDialog-paper { max-height: 100vh; }
+}
+@media (hover: none) {
+  /* touch screens have no hover: the date stays visible and the hover-only shortcut is hidden */
+  .row-actions { display: none !important; }
+  .row-date { opacity: 1 !important; }
+}

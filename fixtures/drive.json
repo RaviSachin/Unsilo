@@ -1,0 +1,65 @@
+[
+  {
+    "file_id": "d01",
+    "name": "Sales Report September 2026.xlsx",
+    "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "modified_at": "2026-10-02T09:00:00+00:00",
+    "web_url": "https://drive.google.com/file/d/d01",
+    "text": "# Sheet: Summary\nMonth | Rentals closed | Revenue (INR)\nAugust 2026 | 14 | 21,40,000\nSeptember 2026 | 18 | 27,85,000\n# Sheet: Top customers\nShree Constructions | 6,20,000\nDeccan Infra | 4,10,000",
+    "extract_error": null
+  },
+  {
+    "file_id": "d02",
+    "name": "Q-2291 Quotation Shree Constructions.pdf",
+    "mime_type": "application/pdf",
+    "modified_at": "2026-10-09T09:00:00+00:00",
+    "web_url": "https://drive.google.com/file/d/d02",
+    "text": "QUOTATION Q-2291 To Shree Constructions. 2 x 20T excavator, Rs 1,85,000 per machine per month, 45 days, operator included. Valid 15 days.",
+    "extract_error": null
+  },
+  {
+    "file_id": "d03",
+    "name": "Diwali Campaign Plan",
+    "mime_type": "application/vnd.google-apps.document",
+    "modified_at": "2026-10-05T09:00:00+00:00",
+    "web_url": "https://docs.google.com/document/d/d03",
+    "text": "Diwali marketing campaign: Instagram reels, LinkedIn ads targeting contractors, 10% festive discount banner, budget Rs 80,000.",
+    "extract_error": null
+  },
+  {
+    "file_id": "d04",
+    "name": "Vendor KYC - Patil Enterprises.pdf",
+    "mime_type": "application/pdf",
+    "modified_at": "2026-10-14T09:00:00+00:00",
+    "web_url": "https://drive.google.com/file/d/d04",
+    "text": "KYC form. Vendor: Patil Enterprises. PAN: ABCDE1234F. GSTIN 27ABCDE1234F1Z5. Aadhaar of proprietor verified.",
+    "extract_error": null
+  },
+  {
+    "file_id": "d05",
+    "name": "Office Leave Policy 2026.docx",
+    "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "modified_at": "2026-01-10T09:00:00+00:00",
+    "web_url": "https://drive.google.com/file/d/d05",
+    "text": "Leave policy: 18 paid leaves per year, attendance through biometric, holidays list attached. HR approval needed.",
+    "extract_error": null
+  },
+  {
+    "file_id": "d06",
+    "name": "Expense Ledger Oct 2026",
+    "mime_type": "application/vnd.google-apps.spreadsheet",
+    "modified_at": "2026-10-18T09:00:00+00:00",
+    "web_url": "https://docs.google.com/spreadsheets/d/d06",
+    "text": "# Sheet: Ledger\nDate | Head | Amount\n2026-10-03 | Diesel | 1,20,000\n2026-10-07 | Machine repair | 65,000\n2026-10-12 | Salaries | 4,80,000",
+    "extract_error": null
+  },
+  {
+    "file_id": "d07",
+    "name": "Site meeting minutes 15 Oct",
+    "mime_type": "application/vnd.google-apps.document",
+    "modified_at": "2026-10-15T12:00:00+00:00",
+    "web_url": "https://docs.google.com/document/d/d07",
+    "text": "Minutes of meeting, office: safety audit scheduled 22 Oct, new security guard roster from Monday.",
+    "extract_error": null
+  }
+]
