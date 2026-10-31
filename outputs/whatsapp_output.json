@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-10-30T10:17:48.470114+00:00",
+  "selected_groups": [
+    "PUT_GROUP_NAME_HERE"
+  ],
+  "groups": [
+    {
+      "group_id": "PUT_GROUP_ID_HERE",
+      "group_name": "PUT_GROUP_NAME_HERE",
+      "participants": [],
+      "messages": [],
+      "interpretation": {
+        "summary": "No messages yet.",
+        "participants": [],
+        "action_items": [],
+        "decisions": [],
+        "method": "none"
+      }
+    }
+  ]
+}
