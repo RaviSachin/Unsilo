@@ -4,17 +4,14 @@ import Box from '@mui/material/Box'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import IconButton from '@mui/material/IconButton'
-import Tooltip from '@mui/material/Tooltip'
 import MailRounded from '@mui/icons-material/MailRounded'
 import DescriptionRounded from '@mui/icons-material/DescriptionRounded'
 import ChatRounded from '@mui/icons-material/ChatRounded'
 import VerifiedUserRounded from '@mui/icons-material/VerifiedUserRounded'
 import CheckCircleRounded from '@mui/icons-material/CheckCircleRounded'
 import ErrorOutlineRounded from '@mui/icons-material/ErrorOutlineRounded'
-import ContentCopyRounded from '@mui/icons-material/ContentCopyRounded'
-import LockRounded from '@mui/icons-material/LockRounded'
 import { MovingBorder, NumberTicker } from '../components/aceternity/Effects'
+import WebhookCard from '../components/WebhookCard'
 import { PageHeader, Pill, StatusDot } from '../components/ui'
 import { invalidate, post } from '../lib/api'
 import { useApp } from '../lib/app-context'
@@ -52,7 +49,6 @@ function SourceCard({ icon, title, text, count, unit, on, status, children, dela
 export default function Connections() {
   const { health, toast, refreshHealth } = useApp()
   const [busy, setBusy] = useState<Busy>(null)
-  const hook = `${window.location.origin}/api/webhooks/whatsapp`
 
   const run = async (what: Exclude<Busy, null>) => {
     setBusy(what)
@@ -122,22 +118,7 @@ export default function Connections() {
           )}
         </Box>
 
-        <Box sx={{ p: 3, borderRadius: 5, border: `1px solid ${C.line}`, background: C.panel }}>
-          <Typography variant="h6" sx={{ mb: 1 }}>WhatsApp webhook</Typography>
-          <Typography sx={{ fontSize: 13.5, color: C.muted, mb: 1.5 }}>Paste your tunnel URL + this path into Meta → WhatsApp → Configuration, with the verify token from <code>.env</code>.</Typography>
-          <Stack direction="row" alignItems="center" spacing={1} sx={{ p: 1.2, pl: 1.8, borderRadius: 2.5, background: '#0b0b0e', border: `1px solid ${C.line}` }}>
-            <Typography className="mono" noWrap sx={{ flex: 1, fontSize: 13, color: C.amber }}>{hook}</Typography>
-            <Tooltip title="Copy">
-              <IconButton size="small" onClick={() => { navigator.clipboard?.writeText(hook); toast('Webhook URL copied') }}><ContentCopyRounded fontSize="small" /></IconButton>
-            </Tooltip>
-          </Stack>
-          <Typography variant="overline" sx={{ display: 'block', color: C.dim, mt: 2.5, mb: 1 }}>Guard rails</Typography>
-          <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-            {['gmail.readonly', 'drive.readonly', 'HMAC-signed webhooks', 'Selected groups only', 'No send / delete'].map((t) => (
-              <Pill key={t} color={C.lime}><LockRounded sx={{ fontSize: 13 }} />{t}</Pill>
-            ))}
-          </Stack>
-        </Box>
+        <WebhookCard />
       </Box>
     </Box>
   )

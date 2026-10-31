@@ -84,7 +84,6 @@ def credentials() -> Credentials | None:
     return creds
 
 
-<<<<<<< HEAD
 def connection_problem() -> str | None:
     """Why Google shows as off, in plain words (None when connected)."""
     if not (settings.GOOGLE_CLIENT_ID and settings.GOOGLE_CLIENT_SECRET):
@@ -103,13 +102,6 @@ def connection_problem() -> str | None:
 
 def connected() -> bool:
     return settings.TOKEN_FILE.exists() and connection_problem() is None
-=======
-def connected() -> bool:
-    try:
-        return credentials() is not None
-    except Exception:
-        return False
->>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 
 
 # --- Gmail ---------------------------------------------------------------------------------------

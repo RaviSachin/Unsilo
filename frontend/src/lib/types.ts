@@ -10,7 +10,11 @@ export type Health = {
   reference_date: string
   setup: SetupItem[]
   counts: { emails: number; documents: number; whatsapp_messages: number }
+  webhook?: { last: string | null; result: string | null; calls: number; tunnel: string | null }
+  whatsapp_direct?: boolean
 }
+
+export type SelfTest = { url: string; ok: boolean; steps: { name: string; ok: boolean; detail: string }[] }
 
 export type CriticalFlag = { filename: string; kind: string; reason: string }
 

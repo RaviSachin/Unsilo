@@ -60,13 +60,8 @@ def terms(q: str) -> list[str]:
     return out
 
 
-<<<<<<< HEAD
 def search(q: str, limit: int = 14, use_period: bool = True) -> tuple[list[dict], dict]:
     words, rng = terms(q), (period(q) if use_period else None)
-=======
-def search(q: str, limit: int = 14) -> tuple[list[dict], dict]:
-    words, rng = terms(q), period(q)
->>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
     q_words = set(re.findall(r"[a-z]+", q.lower()))
     wanted = {s for s, ws in SOURCE_WORDS.items() if q_words & ws}
     info = {"terms": words, "period": [d.isoformat() for d in rng] if rng else None, "sources": sorted(wanted)}
@@ -86,11 +81,7 @@ def search(q: str, limit: int = 14) -> tuple[list[dict], dict]:
         hits.append({**dict(r), "score": score})
 
     # Questions about pending replies: use the triage result, not keyword luck
-<<<<<<< HEAD
     if q_words & PENDING_WORDS:
-=======
-    if q_words & {"pending", "unanswered", "unreplied", "reply", "replied", "waiting", "respond"}:
->>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
         team = next(iter(q_words & {"sales", "marketing"}), None)
         rows = conn.execute("SELECT r.*, x.data FROM records r JOIN results x ON x.kind = 'email_team' "
                             "AND 'gmail:' || x.item_id = r.source_id WHERE r.tags LIKE '%unanswered%'").fetchall()
@@ -127,7 +118,6 @@ def _cite(h: dict, words: list[str]) -> dict:
 
 
 ANSWER_PROMPT = ("Answer questions about a company using ONLY the numbered sources. Every factual sentence cites at "
-<<<<<<< HEAD
                  "least one source like [S2]. If the sources answer only part of the question, answer that part and "
                  "say in one short sentence what is missing (answerable=true). Set answerable=false only when none of "
                  "the sources is relevant. No outside knowledge. Dates are relative to the reference date. Be concise; "
@@ -141,10 +131,6 @@ OVERVIEW_PROMPT = ("Using ONLY the numbered sources (a cross-section of the comp
                    "sources do not contain, say so in one sentence first, then summarise the closest relevant points. "
                    "Use 3 to 8 short '- ' bullet lines grouped by topic, each citing sources like [S2]. "
                    "answerable=true unless the sources are empty.")
-=======
-                 "least one source like [S2]. If the sources don't contain the answer, set answerable=false and say "
-                 "what is missing. No outside knowledge. Dates are relative to the reference date. Be concise.")
->>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 ANSWER_SCHEMA = ai.obj({"answerable": {"type": "boolean"}, "answer": ai.STR, "citations": ai.STRS})
 
 
@@ -161,7 +147,6 @@ def _records_answer(base: dict, hits: list, words: list[str], heading: str) -> d
             "citations": [_cite(h, words) for h in top]}
 
 
-<<<<<<< HEAD
 SUMMARY_WORDS = {"summary", "summarise", "summarize", "overview", "update", "updates", "status", "happening",
                  "highlights", "recap", "brief", "everything", "latest", "recent"}
 
@@ -237,8 +222,6 @@ def _not_found(base: dict, question: str) -> dict:
             "searched": {"emails": e, "documents": d, "whatsapp_messages": w}}
 
 
-=======
->>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
 def answer(question: str) -> dict:
     if GREETING.match(question):
         return {"question": question, "retrieval": {"terms": [], "period": None, "sources": []},
@@ -251,7 +234,6 @@ def answer(question: str) -> dict:
     hits, info = search(question)
     words = info["terms"]
     base = {"question": question, "retrieval": info}
-<<<<<<< HEAD
     q_words = set(re.findall(r"[a-z]+", question.lower()))
     wants_summary = bool(q_words & SUMMARY_WORDS)
     if q_words & PENDING_WORDS and not any("unanswered" in (h.get("tags") or "") for h in hits) \
@@ -285,32 +267,3 @@ def answer(question: str) -> dict:
     if found:
         return found
     return _not_found(base, question)
-=======
-    if not hits:
-        return {**base, "answerable": False, "mode": "not_found", "answer": NOT_FOUND, "citations": []}
-    if not settings.ai_enabled():
-        return _records_answer(base, hits, words, "Most relevant records (no AI key set):")
-
-    sources = "\n\n".join(f"[S{i}] id={h['source_id']} type={h['source']} date={(h['occurred_at'] or '')[:10]} "
-                          f"from={h['sender']}\ntitle: {h['title']}\n{_snippet(h['body'] or '', words)}"
-                          for i, h in enumerate(hits, 1))
-    out = ai.json_call(ANSWER_PROMPT, f"Reference date: {settings.reference_date().date()}\nQuestion: {question}\n\n"
-                                      f"Sources:\n{sources}", ANSWER_SCHEMA)
-    if not out:
-        # Gemini busy or out of quota: still show the matching records instead of nothing.
-        return _records_answer(base, hits, words, "Gemini is busy right now, so here are the most relevant records:")
-    labels = {f"S{i}": h for i, h in enumerate(hits, 1)}
-    ids = {h["source_id"]: h for h in hits}
-    cited = []
-    for c in out["citations"]:
-        h = labels.get(c.strip("[] ")) or ids.get(c)
-        if h and h not in cited:
-            cited.append(h)
-    if not out["answerable"] or not cited:  # enforced in code: no valid citation, no answer
-        return {**base, "answerable": False, "mode": "not_found",
-                "answer": out["answer"] if not out["answerable"] and out["answer"] else NOT_FOUND, "citations": []}
-    text = out["answer"]
-    for label, h in labels.items():
-        text = text.replace(f"[{label}]", f"[{h['source_id']}]")
-    return {**base, "answerable": True, "mode": "ai", "answer": text, "citations": [_cite(h, words) for h in cited]}
->>>>>>> 2fc174a364fb375a5a0731d82cb95fb37f4267a3
